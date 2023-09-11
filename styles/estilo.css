@@ -1,0 +1,426 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;600;800&display=swap");
+.fa-facebook, .fa-whatsapp {
+  width: 100px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+.fa-facebook:hover, .fa-whatsapp:hover {
+  background-color: red;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; /* Elimina el margen predeterminado del body */
+  padding: 0;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  padding: 20px;
+}
+.contacto .contacto-formulario {
+  background-color: #bb221d;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+.contacto .contacto-formulario h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.contacto .contacto-formulario form {
+  display: flex;
+  flex-direction: column;
+}
+.contacto .contacto-formulario form .campo {
+  margin-bottom: 20px;
+}
+.contacto .contacto-formulario form .campo label {
+  font-weight: bold;
+}
+.contacto .contacto-formulario form .campo input,
+.contacto .contacto-formulario form .campo textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.contacto .contacto-formulario form .campo textarea {
+  resize: vertical;
+}
+.contacto .contacto-formulario form .boton-enviar {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in-out;
+  align-self: center;
+}
+.contacto .contacto-formulario form .boton-enviar:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 767px) {
+  .contacto-formulario {
+    padding: 10px;
+  }
+  .contacto-formulario h1 {
+    font-size: 1.5rem;
+  }
+  .contacto-formulario .campo {
+    margin-bottom: 10px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+*::-moz-selection {
+  background-color: black;
+  color: #bb221d;
+}
+*::selection {
+  background-color: black;
+  color: #bb221d;
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  background-color: #000000;
+}
+
+.producto {
+  border: 10px solid #960101;
+  padding: 30px;
+  text-align: center;
+  background-color: #bb221d;
+  transition: transform 0.2s ease-in-out;
+}
+.producto:hover {
+  transform: scale(1.05);
+}
+.producto img {
+  background: #bb221d;
+  width: 75%;
+  height: 65%;
+}
+.producto h2 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+.producto p {
+  font-size: 1rem;
+  color: #000000;
+  background-color: white;
+  border: 2px solid;
+}
+.producto .precio {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+.producto .boton-comprar {
+  background-color: #1100ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+.producto .boton-comprar:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 767px) {
+  .catalogo {
+    grid-template-columns: 1fr;
+  }
+}
+header {
+  background-color: #bb221d;
+  display: flex;
+  gap: 20px;
+  grid-gap: 20px;
+}
+header .logo {
+  width: 100px;
+}
+header .navbar {
+  display: flex;
+  align-items: center;
+}
+header .navbar .menu {
+  display: flex;
+  list-style-type: none;
+  gap: 10px;
+  grid-gap: 10px;
+}
+header .navbar .menu .menu__item {
+  animation: swirl-in-fwd 0.6s ease-out both;
+}
+header .navbar .menu .menu__item a {
+  background: white;
+  border: 5px solid white;
+  color: #bb221d;
+  text-decoration: none;
+  padding: 1rem;
+}
+header .navbar .menu .menu__item a:hover {
+  background: #bb221d;
+  color: white;
+}
+header .navbar .menu .menu__item:nth-child(5) a {
+  background: #960101;
+  border-color: #960101;
+  color: white;
+}
+header .navbar .menu .menu__item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+header .navbar .menu .menu__item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+header .navbar .menu .menu__item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+header .navbar .menu .menu__item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+@keyframes swirl-in-fwd {
+  0% {
+    transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+.imagenPrincipal {
+  height: 80vh;
+  background-image: url("../img/rinonera.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-inline: 200px;
+}
+.imagenPrincipal h2 {
+  color: white;
+  background-color: rgba(119, 2, 2, 0.596);
+  padding-inline: 15px;
+}
+.imagenPrincipal h2::first-letter {
+  color: #bb221d;
+}
+.imagenPrincipal h2::-moz-selection {
+  background: #bb221d;
+  color: black;
+}
+.imagenPrincipal h2::selection {
+  background: #bb221d;
+  color: black;
+}
+.imagenPrincipal p {
+  color: white;
+  text-align: center;
+  background-color: rgba(119, 2, 2, 0.596);
+  padding-inline: 10px;
+}
+.imagenPrincipal p::-moz-selection {
+  background: black;
+  color: #bb221d;
+}
+.imagenPrincipal p::selection {
+  background: black;
+  color: #bb221d;
+}
+
+.tarjetitas {
+  padding: 60px;
+  display: flex;
+  gap: 30px;
+}
+.tarjetitas .tarjetita {
+  background-color: #bb221d;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.tarjetitas .tarjetita .informacion {
+  padding: 0 20px 20px 20px;
+}
+.tarjetitas .tarjetita .tarjetita__imagen {
+  max-width: 100%;
+}
+.tarjetitas .tarjetita.tarjetitados {
+  flex: 1.5;
+}
+.tarjetitas .tarjetitared {
+  background-color: red;
+}
+
+.pie {
+  display: flex;
+  justify-content: center;
+  background-color: #bb221d;
+  color: white;
+  padding-block: 20px;
+}
+.pie .iconos {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.pie .iconos .fab {
+  padding: 1rem;
+}
+
+.fa-facebook, .fa-whatsapp {
+  background-color: blue;
+}
+
+.fa-instagram {
+  background-color: #8b0960;
+}
+
+.fa-whatsapp {
+  background-color: #3fda10;
+}
+
+.cajitas .cajita1 {
+  background-color: #3fda10;
+}
+
+.cajitas {
+  margin-bottom: 3rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.cajitas .cajita {
+  background: #bb221d;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cajitas .cajita1 {
+  width: 200px;
+  height: 150px;
+}
+
+.cajitas .cajita2 {
+  width: 150px;
+  height: 200px;
+}
+
+.cajitas .cajita3 {
+  width: 200px;
+  height: 150px;
+}
+
+.cajitas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  padding-block: 1rem;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.quienes-somos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.quienes-somos .quienes-somos-titulo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.quienes-somos .quienes-somos-titulo h1 {
+  font-size: 2rem;
+}
+.quienes-somos .quienes-somos-titulo p {
+  font-size: 1rem;
+  color: #666;
+}
+.quienes-somos .quienes-somos-contenido {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+.quienes-somos .quienes-somos-contenido .quienes-somos-mision,
+.quienes-somos .quienes-somos-contenido .quienes-somos-vision {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.quienes-somos .quienes-somos-contenido .quienes-somos-mision:hover,
+.quienes-somos .quienes-somos-contenido .quienes-somos-vision:hover {
+  transform: scale(1.05);
+}
+.quienes-somos .quienes-somos-contenido .quienes-somos-mision h2,
+.quienes-somos .quienes-somos-contenido .quienes-somos-vision h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.quienes-somos .quienes-somos-contenido .quienes-somos-mision p,
+.quienes-somos .quienes-somos-contenido .quienes-somos-vision p {
+  font-size: 1rem;
+  color: #000000;
+}
+.quienes-somos .quienes-somos-contenido .quienes-somos-valores {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.quienes-somos .quienes-somos-contenido .quienes-somos-valores:hover {
+  transform: scale(1.05);
+}
+.quienes-somos .quienes-somos-contenido h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.quienes-somos .quienes-somos-contenido li {
+  margin-left: 20px;
+}
+
+@media (max-width: 767px) {
+  .quienes-somos-contenido {
+    grid-template-columns: 1fr; /* Una columna para dispositivos móviles */
+  }
+}/*# sourceMappingURL=estilo.css.map */

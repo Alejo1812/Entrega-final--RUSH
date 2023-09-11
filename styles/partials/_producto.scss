@@ -1,0 +1,67 @@
+// Estilos para la sección del catálogo
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); // Dos columnas
+  grid-gap: 30px; // Espacio entre elementos
+  background-color: #000000;
+  
+}
+
+// Estilos para los productos
+.producto {
+  border: 10px solid $secondaryColor;
+  padding: 30px;
+  text-align: center;
+  background-color: $mainColor;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    background: $mainColor;
+        width: 75%;
+        height: 65%;
+        
+       
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #000000;
+    background-color: white; border: 2px solid
+  }
+
+  .precio {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .boton-comprar {
+    background-color: #1100ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+// Estilos responsivos para dispositivos móviles
+@media (max-width: 767px) {
+  .catalogo {
+    grid-template-columns: 1fr; // Una columna para dispositivos móviles
+  }
+}

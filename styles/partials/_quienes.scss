@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .quienes-somos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    
+  
+    .quienes-somos-titulo {
+      text-align: center;
+      margin-bottom: 20px;
+  
+      h1 {
+        font-size: 2rem;
+      }
+  
+      p {
+        font-size: 1rem;
+        color: #666;
+      }
+    }
+  
+    .quienes-somos-contenido {
+      display: grid;
+      grid-template-columns: 1fr ;
+      grid-gap: 20px;
+    
+  
+      .quienes-somos-mision,
+      .quienes-somos-vision {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        &:hover {
+            transform: scale(1.05);
+          }
+        h2 {
+          font-size: 1.5rem;
+          margin-bottom: 10px;
+        }
+  
+        p {
+          font-size: 1rem;
+          color: #000000;
+        }
+      }
+  
+      .quienes-somos-valores {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        &:hover {
+            transform: scale(1.05);
+          }
+          }
+  
+        h2 {
+          font-size: 1.5rem;
+          margin-bottom: 10px;
+        }
+  
+        
+          li {
+            margin-left: 20px;
+          }
+        }
+      }
+    
+  
+  
+  @media (max-width: 767px) {
+    .quienes-somos-contenido {
+      grid-template-columns: 1fr; /* Una columna para dispositivos móviles */
+    }
+  }
+  
