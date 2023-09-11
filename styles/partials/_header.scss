@@ -55,7 +55,18 @@ header {
         }
     }
 }
+@media (max-width: 768px) {
+    .navbar .menu {
+        flex-direction: column; /* Mostrar los elementos del menú uno debajo del otro */
+        align-items: flex-start; /* Alinea los elementos del menú a la izquierda */
 
+        .menu__item {
+            width: 100%; /* Ocupar el ancho completo */
+            text-align: left; /* Alinea el texto a la izquierda */
+            margin-bottom: 35px; /* Espacio entre elementos del menú */
+        }
+    }
+}
  @-webkit-keyframes swirl-in-fwd{0%{-webkit-transform:rotate(-540deg) scale(0);transform:rotate(-540deg) scale(0);opacity:0}100%{-webkit-transform:rotate(0) scale(1);transform:rotate(0) scale(1);opacity:1}}
  @keyframes swirl-in-fwd{0%{-webkit-transform:rotate(-540deg) scale(0);transform:rotate(-540deg) scale(0);opacity:0}100%{-webkit-transform:rotate(0) scale(1);transform:rotate(0) scale(1);opacity:1}}
 
